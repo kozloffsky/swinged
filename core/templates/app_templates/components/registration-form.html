@@ -1,0 +1,47 @@
+<form data-bind="submit: register">
+    <div class="form-group">
+        <label for="registration_login">Login</label>
+        <input type="text" class="form-control"
+               id="registration_login"
+               placeholder="Login"
+               data-bind="textInput: username">
+
+        <span id="loginHelpBlock" class="help-block"
+              data-bind="validationMessage: username"></span>
+
+    </div>
+    <div class="form-group">
+        <label for="registration_email">Email</label>
+        <input type="email" class="form-control"
+               id="registration_email"
+               placeholder="Email"
+               data-bind="textInput: email">
+
+        <span id="loginHelpBlock" class="help-block"
+              data-bind="validationMessage: email"></span>
+
+    </div>
+    <div class="form-group">
+        <label for="registration_password">Password</label>
+        <input type="password" class="form-control"
+               id="registration_password"
+               placeholder="Password"
+               data-bind="textInput: password">
+
+        <span id="loginHelpBlock" class="help-block"
+              data-bind="validationMessage: password"></span>
+
+    </div>
+    <!--<div class="form-group">
+        <label for="registration_gender">Gender</label>
+        <select id="registration_gender" class="form-control" data-bind="value: registrationGender">
+            {% for short, gender in genders %}
+                <option value="{{ short }}">{{ gender }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="form-group">
+        <input type="date" id="registration_birthdate" class="form-control"/>
+    </div>-->
+    <button type="submit" class="btn btn-default">Register</button>
+</form>

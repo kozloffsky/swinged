@@ -1,0 +1,24 @@
+{
+  "name": "swinged",
+  "version": "0.1.0",
+  "description": "swinged app",
+  "main": "index.js",
+  "author": "Mike Oz",
+  "license": "MIT",
+  "directories": {
+    "lib": "core/static"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "crossroads": "^0.12.2",
+    "hasher": "^1.2.0",
+    "jquery": "^3.2.1",
+    "js-cookies": "^1.0.4",
+    "knockout": "^3.4.2",
+    "knockout-validation": "^0.1.1",
+    "knockout.mapping": "^2.4.3",
+    "knockout.validation": "^2.0.3",
+    "requirejs": "^2.3.3",
+    "text": "requirejs/text"
+  }
+}

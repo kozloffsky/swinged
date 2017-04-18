@@ -1,0 +1,28 @@
+<form data-bind="submit: logIn">
+    <div class="form-group">
+        <label for="login">Login</label>
+        <input type="text" class="form-control"
+               id="login"
+               placeholder="Login"
+               data-bind="textInput: username">
+
+        <span id="loginHelpBlock" class="help-block"
+              data-bind="validationMessage: username"></span>
+
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control"
+               id="password"
+               placeholder="Password"
+               data-bind="textInput: password">
+        <span id="passwordHelpBlock" class="help-block"
+              data-bind="validationMessage: password"></span>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox">Do NOT remember me
+        </label>
+    </div>
+    <button type="submit" class="btn btn-default">Enter</button>
+</form>
