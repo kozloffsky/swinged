@@ -46,6 +46,11 @@
 </div>
 
 <div data-bind="component: component" class="container-fluid"></div>
+<div class="container-fluid" data-bind="foreach: errors">
+    <div class="alert alert-warning">
+        <strong data-bind="text:field"></strong><span data-bind="text: error"></span>
+    </div>
+</div>
 <script src="{% static "js/require.js" %}" data-main="{% static "js/app" %}"></script>
 <script>
     window.jsRoot = "{% static "" %}js/";

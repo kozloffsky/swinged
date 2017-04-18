@@ -6,8 +6,10 @@ define(['knockout',
         'bootstrap',
         "app/routes",
         "knockout.validation",
-        "app/service/user"],
-    function (ko, $, userSerivice, h, crossroads, b, routes, kv, userService) {
+        "app/service/user",
+    "app/service/api"
+    ],
+    function (ko, $, userSerivice, h, crossroads, b, routes, kv, userService, api) {
 
         userService.authenticated.add(function (token) {
             h.setHash('profile/1');
@@ -16,6 +18,13 @@ define(['knockout',
         var MainViewModel = function () {
             this.component = ko.observable();
             this.data = ko.observable();
+            this.errors = ko.observableArray();
+
+            api.getError().add(function (error) {
+                for(var e in error.responseJSON.errors) {
+                    this.errors.push({field: e, error:error.responseJSON.errors[e]});
+                }
+            }.bind(this));
         };
 
         var vm = new MainViewModel();

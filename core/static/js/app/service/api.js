@@ -18,7 +18,7 @@ define(['jquery', 'app/service/user', 'knockout', 'signals','jscookies'], functi
         },
 
         getError: function () {
-
+            return error;
         },
 
         /**
